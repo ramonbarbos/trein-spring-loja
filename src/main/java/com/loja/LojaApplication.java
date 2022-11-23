@@ -28,7 +28,7 @@ public class LojaApplication  implements WebMvcConfigurer{
 	}
 
 	@RequestMapping("/")
-	public String index() {
+	 String index() {
 
 		return "index";
 	}
