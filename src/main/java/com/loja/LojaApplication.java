@@ -27,11 +27,7 @@ public class LojaApplication  implements WebMvcConfigurer{
 		SpringApplication.run(LojaApplication.class, args);
 	}
 
-	@RequestMapping("/")
-	 String index() {
-
-		return "index";
-	}
+	
 	
 	
 	@Override

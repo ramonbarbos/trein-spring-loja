@@ -52,15 +52,7 @@ public class ProdutoController {
 		}
 	}
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/")
-	public ModelAndView listacategoria() {
-		
-		Iterable<Categoria> categoriaIte = categoriaRepository.findAll();
-		ModelAndView viewCaminho = new ModelAndView("/index");
-		viewCaminho.addObject("categoria", categoriaIte);// Enviando para o formulario
-
-		return viewCaminho;
-	}
+	
 	
 
 	@RequestMapping(method = RequestMethod.GET, value = "/cadastroProduto")
