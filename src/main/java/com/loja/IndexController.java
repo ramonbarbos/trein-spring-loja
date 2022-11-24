@@ -16,7 +16,7 @@ public class IndexController {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
-	  @RequestMapping("/")
+	 /* @RequestMapping("/")
 	  public ModelAndView listacategoria() {
 		
 		Iterable<Categoria> categoriaIte = categoriaRepository.findAll();
@@ -24,6 +24,12 @@ public class IndexController {
 		viewCaminho.addObject("categoria", categoriaIte);// Enviando para o formulario
 
 		return viewCaminho;
+	}*/
+	
+
+	@RequestMapping("/")
+	public String index() {
+		return "index";
 	}
 	
 	@RequestMapping("/login")
