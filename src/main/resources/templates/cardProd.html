@@ -29,7 +29,7 @@
               <h5>R$  <span th:text="${p.valor}"></span></h5>
               <p class="card-text"> <span th:text="${p.descricao}"></span></p>
               
-              <!--  --><a th:href="@{/addCarrinho/{idprod}(idprod=${p.id})}" onclick="" class="btn btn-success">Adicionar ao Carrinho</a>
+              <!--  --><a th:href="@{/addCarrinho/{idprod}(idprod=${p.id})}" onclick="alert('Adicionado ao Carrinho')" class="btn btn-success">Adicionar ao Carrinho</a>
             
             
             
