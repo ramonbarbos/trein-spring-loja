@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.loja.model.Categoria;
+import com.loja.model.Produto;
 import com.loja.repository.CategoriaRepository;
 
 @Controller
@@ -36,10 +37,13 @@ public class IndexController {
 		return "index";
 	}
 	
-	@RequestMapping("/login")
+
+
+	
+	/*@RequestMapping("/login")
 	public String login() {
 		return "login";
-	}
+	}*/
 	
 
 	

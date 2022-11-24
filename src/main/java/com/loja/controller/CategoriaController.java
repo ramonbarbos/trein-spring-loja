@@ -28,7 +28,14 @@ public class CategoriaController {
 	
 
 	
-	
+	@RequestMapping("/home")
+	public ModelAndView home() {
+		Iterable<Categoria> categoriaIte = categoriaRepository.findAll();
+		ModelAndView viewCaminho = new ModelAndView("/home");
+		viewCaminho.addObject("categoria", categoriaIte);// Enviando para o formulario
+		
+		return viewCaminho;
+	}
 	
 
 	

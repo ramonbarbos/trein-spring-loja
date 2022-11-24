@@ -36,7 +36,7 @@ public class ImagemController {
 		}
 		
 		//Salvar com foto
-				@RequestMapping(method = RequestMethod.POST, value = "/*/salvarFoto", consumes = {"multipart/form-data"})
+				@RequestMapping(method = RequestMethod.POST, value = "/salvarFoto", consumes = {"multipart/form-data"})
 				public String salvarFoto(Imagem imagem, final MultipartFile file) throws IOException {
 				
 					System.out.println("chegou");
