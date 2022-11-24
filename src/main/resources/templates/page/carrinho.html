@@ -37,22 +37,30 @@
 				</thead>
 				<tbody>
 					<tr th:each="item : ${listaItens}">
-             
-              <td> <span th:text="${item.nome}"></span> </td>
-              <td>0,00</td>
-             
-              
-              <td> <a  th:href="@{/alterarQuantidade/{id}/{acao}(id=${item.produto.id},acao=${0})}" class="btn btn-success">-</a>
-                <span th:text="${item.quantidade}"></span> 
-                <a  th:href="@{/alterarQuantidade/{id}/{acao}(id=${item.produto.id},acao=${1})}"  class="btn btn-success">+</a></td>
-                <td> <span th:text="${item.valorUnitario}"></span> </td>
-                <td> <a th:href="@{/deletarItem/{id}(id=${item.produto.id})}" class="btn btn-danger">Excluir</a> </td>
-                </tr>
+
+						<td> <span th:text="${item.nome}"></span> </td>
+						<td>0,00</td>
+
+
+						<td> <a th:href="@{/alterarQuantidade/{id}/{acao}(id=${item.produto.id},acao=${0})}"
+								class="btn btn-success">-</a>
+							<span th:text="${item.quantidade}"></span>
+							<a th:href="@{/alterarQuantidade/{id}/{acao}(id=${item.produto.id},acao=${1})}"
+								class="btn btn-success">+</a>
+						</td>
+						<td> <span th:text="${item.valorUnitario}"></span> </td>
+						<td> <a th:href="@{/deletarItem/{id}(id=${item.produto.id})}" class="btn btn-danger">Excluir</a>
+						</td>
+					</tr>
 
 				</tbody>
 			</table>
 
-
+			<tr>
+				<td> <h4>Sub-Total:</h4> <span th:text="${compra.valorTotal}"></span> </td>
+				<td><h4>Frete: </h4> 0,00</td>
+				<td><h4>Total: </h4> <span th:text="${compra.valorTotal}"></span> </td>
+			</tr>
 
 		</div>
 
