@@ -28,7 +28,7 @@ public class CategoriaController {
 	
 
 	
-	@RequestMapping("/home")
+	@GetMapping("/home")
 	public ModelAndView home() {
 		Iterable<Categoria> categoriaIte = categoriaRepository.findAll();
 		ModelAndView viewCaminho = new ModelAndView("/home");
