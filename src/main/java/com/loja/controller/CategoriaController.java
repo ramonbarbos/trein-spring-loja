@@ -52,7 +52,7 @@ public class CategoriaController {
 	}
 	
 	//Salvar com foto
-		@RequestMapping(method = RequestMethod.POST, value = "/*/salvarCategoria", consumes = {"multipart/form-data"})
+		@RequestMapping(method = RequestMethod.POST, value = "/salvarCategoria", consumes = {"multipart/form-data"})
 		public String salvarCategoria(Categoria categoria, final MultipartFile file) throws IOException {
 		
 			System.out.println("chegou");
@@ -63,7 +63,7 @@ public class CategoriaController {
 			
 			categoriaRepository.save(categoria);
 			
-			return "cadastroCategoria";
+			return "redirect:/cadastroCategoria";
 		}
 	
 		//Retornar Foto
