@@ -40,10 +40,10 @@ public class IndexController {
 
 
 	
-	/*@RequestMapping("/login")
+	@RequestMapping("/login")
 	public String login() {
 		return "login";
-	}*/
+	}
 	
 
 	
