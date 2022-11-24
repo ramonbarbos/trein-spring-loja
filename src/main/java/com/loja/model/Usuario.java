@@ -1,5 +1,5 @@
 package com.loja.model;
-/*
+
 import java.util.Collection;
 import java.util.List;
 
@@ -139,4 +139,3 @@ public class Usuario implements UserDetails {
 	}
 
 }
-*/

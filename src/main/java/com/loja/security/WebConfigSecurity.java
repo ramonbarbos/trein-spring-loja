@@ -1,5 +1,5 @@
 package com.loja.security;
-/*import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -28,8 +28,8 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter{
 		.authorizeRequests() //Permitir restringir acessos
 		.antMatchers(HttpMethod.GET, "/**", "/cadastrarUsuario/" ).permitAll() 
 		
-		.anyRequest().authenticated();
-		/*.and().formLogin().permitAll() //Permite qualquer usuario
+		.anyRequest().authenticated()
+		.and().formLogin().permitAll() //Permite qualquer usuario
 		.loginPage("/login")//Pagina de login 
 		.defaultSuccessUrl("/") //Pagina que irá depois do login 
 		.failureUrl("/login") //Se falhar o login
@@ -52,4 +52,3 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter{
 	}
 	
 }
-*/

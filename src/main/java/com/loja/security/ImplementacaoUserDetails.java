@@ -1,5 +1,5 @@
 package com.loja.security;
-/*
+
 import org.apache.tomcat.jni.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -37,4 +37,3 @@ public class ImplementacaoUserDetails  implements UserDetailsService{
 				
 	}
 }
-*/

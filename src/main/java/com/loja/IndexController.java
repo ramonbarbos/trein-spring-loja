@@ -25,7 +25,7 @@ public class IndexController {
 		viewCaminho.addObject("categoria", categoriaIte);// Enviando para o formulario
 
 		return viewCaminho;
-	}*/
+	}
 	
 
 	@RequestMapping("/")
@@ -35,7 +35,7 @@ public class IndexController {
 		viewCaminho.addObject("categoria", categoriaIte);// Enviando para o formulario
 		
 		return "index";
-	}
+	}*/
 	
 
 
