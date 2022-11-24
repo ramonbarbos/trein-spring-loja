@@ -225,7 +225,7 @@ public class ProdutoController {
 				} else if (acao == 0) {
 					it.setQuantidade(it.getQuantidade() - 1);
 					it.setValorTotal(0.);
-					 it.setValorTotal(it.getValorTotal() - (it.getQuantidade() * it.getValorUnitario()) );
+					// it.setValorTotal(it.getValorTotal() - (it.getQuantidade() * it.getValorUnitario()) );
 					// +(it.getQuantidade()*it.getValorUnitario()));
 				}
 				break;
@@ -253,5 +253,51 @@ public class ProdutoController {
 		andViewCAR.addObject("listaItens", itensCompras);// Enviar o produto novamente para a tela
 		return "redirect:/carrinho";
 	}
+	
+	@GetMapping(value = "/deletarTudo")
+	public String deletarItem() {
+
+		for (ItensCompra it : itensCompras) { // Pecorrer lista
+			
+			 while (!it.equals(0))
+		        {
+		        	itensCompras.remove(it);
+		        	it.setValorTotal(0.);
+		        }
+	
+			 System.out.println("deletou tudo");	
+
+		}
+
+		return "redirect:/produto";
+	}
+	
+
+	@GetMapping(value = "/finalizarCarrinho")
+	public String finalizarCar() {
+
+		for (ItensCompra it : itensCompras) { // Pecorrer lista
+			
+			 while (!it.equals(0))
+		        {
+		        	itensCompras.remove(it);
+		        	it.setValorTotal(0.);
+		        }
+	
+			 System.out.println("deletou tudo");	
+
+		}
+		
+		return "redirect:/finalizar";
+	}
+	
+	@RequestMapping("/finalizar")
+	public String finalizar() {
+		
+		
+		return "page/finalizar";
+	}
+	
+
 	
 }
