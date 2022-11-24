@@ -29,6 +29,10 @@ public class IndexController {
 
 	@RequestMapping("/")
 	public String index() {
+		Iterable<Categoria> categoriaIte = categoriaRepository.findAll();
+		ModelAndView viewCaminho = new ModelAndView("/index");
+		viewCaminho.addObject("categoria", categoriaIte);// Enviando para o formulario
+		
 		return "index";
 	}
 	
