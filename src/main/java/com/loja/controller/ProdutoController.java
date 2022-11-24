@@ -225,7 +225,7 @@ public class ProdutoController {
 				} else if (acao == 0) {
 					it.setQuantidade(it.getQuantidade() - 1);
 					it.setValorTotal(0.);
-					// it.setValorTotal(it.getValorTotal()
+					 it.setValorTotal(it.getValorTotal() - (it.getQuantidade() * it.getValorUnitario()) );
 					// +(it.getQuantidade()*it.getValorUnitario()));
 				}
 				break;
@@ -243,6 +243,8 @@ public class ProdutoController {
 		for (ItensCompra it : itensCompras) { // Pecorrer lista
 			if (it.getProduto().getId().equals(id)) {// Se meu produto+id for igual o parametro
 				itensCompras.remove(it);
+				it.setValorTotal(0.);
+				
 				break;
 			}
 		}
