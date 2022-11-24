@@ -63,7 +63,7 @@ public class CategoriaController {
 			
 			categoriaRepository.save(categoria);
 			
-			return "redirect:/cadastroCategoria";
+			return "cadastroCategoria";
 		}
 	
 		//Retornar Foto
