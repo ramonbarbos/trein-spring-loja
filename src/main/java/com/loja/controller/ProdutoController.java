@@ -18,13 +18,13 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.loja.model.Produto;
-import com.loja.model.Usuario;
+
 import com.loja.model.Compra;
 import com.loja.model.ItensCompra;
 
 import com.loja.model.Categoria;
 import com.loja.repository.CategoriaRepository;
-import com.loja.repository.LoginRepository;
+
 import com.loja.repository.ProdutoRepository;
 
 @Controller

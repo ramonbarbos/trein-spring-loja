@@ -1,5 +1,5 @@
 package com.loja.model;
-
+/*
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,9 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 @Entity
 public class Roles implements GrantedAuthority {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -38,4 +36,4 @@ public class Roles implements GrantedAuthority {
 	
 	
 	
-}
+}*/
