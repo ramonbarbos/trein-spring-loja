@@ -31,21 +31,18 @@ public class UsuarioController {
 	
 	
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/cadastrarUsuario")
-	public ModelAndView cadastrarUsuario() {
+	@RequestMapping(value = "/cadastrarUsuario")
+	public String cadastrarUsuario() {
 	
-		ModelAndView andView = new ModelAndView("/cadastrarUsuario");
 		
-		
-		//andView.addObject("msg", "Enviado"); 
 		
 		 	
 	
 		
-		return andView;
+		return "cadastrarUsuario";
 	}
 	
-	@PostMapping(value = "/salvarCadastro")
+	@PostMapping(value = "/*/salvarCadastro")
 	public String salvarCadastro(Usuario usuario) {
 		
 		ModelAndView andView = new ModelAndView("/cadastrarUsuario");
