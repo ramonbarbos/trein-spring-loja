@@ -28,7 +28,7 @@ public class ImagemController {
 		private ImagemRepository imagemRepository;
 		
 		@RequestMapping(method = RequestMethod.GET, value = "/ajustesImagens")
-		public ModelAndView categoria() {
+		public ModelAndView imagens() {
 			ModelAndView andView = new ModelAndView("page/ajustesImagens");
 
 			
