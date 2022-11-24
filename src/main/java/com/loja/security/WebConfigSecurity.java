@@ -29,13 +29,13 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter{
 		.authorizeRequests() //Permitir restringir acessos
 		.antMatchers(HttpMethod.GET, "/**", "/cadastrarUsuario/" ).permitAll() 
 		
-		.anyRequest().authenticated()
-		.and().formLogin().permitAll() //Permite qualquer usuario
+		.anyRequest().authenticated();
+		/*.and().formLogin().permitAll() //Permite qualquer usuario
 		.loginPage("/login")//Pagina de login 
 		.defaultSuccessUrl("/") //Pagina que irá depois do login 
 		.failureUrl("/login") //Se falhar o login
 		.and().logout().logoutSuccessUrl("/login") //Mapeia a URL de sair do sistama e invalida o usuario de identificar
-		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
+		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"));*/
 	}
 	
 	@Override //Cria autenticação do usuario com banco de dados ou em memoria

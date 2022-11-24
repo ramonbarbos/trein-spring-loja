@@ -53,11 +53,12 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Menu
             </a>
+            <!-- sec:authorize="hasAnyRole('ROLE_ADMIN')" -->
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a sec:authorize="hasAnyRole('ROLE_ADMIN')" class="dropdown-item" href="/cadastroProduto">Produtos</a>
-              <a sec:authorize="hasAnyRole('ROLE_ADMIN')" class="dropdown-item" href="/cadastroCategoria">Categorias</a>
-              <a sec:authorize="hasAnyRole('ROLE_ADMIN')" class="dropdown-item" href="/page/ajustesUsuario">Usuarios</a>
-              <a sec:authorize="hasAnyRole('ROLE_ADMIN')" class="dropdown-item" href="/ajustesImagens">Imagens</a>
+              <a  class="dropdown-item" href="/cadastroProduto">Produtos</a>
+              <a class="dropdown-item" href="/cadastroCategoria">Categorias</a>
+              <a  class="dropdown-item" href="/page/ajustesUsuario">Usuarios</a>
+              <a  class="dropdown-item" href="/ajustesImagens">Imagens</a>
               <a class="dropdown-item" href="#">Ajustes</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/logout">Sair</a>
