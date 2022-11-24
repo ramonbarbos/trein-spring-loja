@@ -125,9 +125,9 @@ public class ProdutoController {
 	//AÇÕES
 	
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/produto")
+	@RequestMapping("/produto")
 	public ModelAndView produto(Long idcate) {
-		ModelAndView andView = new ModelAndView("/produto");
+		ModelAndView andView = new ModelAndView("produto");
 
 		idcate = this.categoria;
 
