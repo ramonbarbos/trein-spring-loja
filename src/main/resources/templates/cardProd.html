@@ -21,8 +21,8 @@
         <div  class="row justify-content-center ">
   
           <div th:each="p : ${liProd}" >
-            <div class="card m-1"  style="width: 18rem; height: 30rem; ">
-             <img class="card-img-top" th:src="@{/imagem/{idprod}(idprod=${p.id})}" alt="Card image cap" style="height: 19rem;"> 
+            <div class="card m-1"  style="width: 18rem;  ">
+             <img class="card-img-top" th:src="@{/imagem/{idprod}(idprod=${p.id})}" alt="Card image cap" > 
              
             <div class="card-body">
               <h5 class="card-title" > <span th:text="${p.nome}"></span></h5>
