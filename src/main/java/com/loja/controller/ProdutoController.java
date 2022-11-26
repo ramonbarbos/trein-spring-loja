@@ -46,7 +46,7 @@ public class ProdutoController {
 	private Compra compra = new Compra();
 	
 	private void calculatTotal() {
-
+		compra.setValorTotal(0.);
 		for (ItensCompra it : itensCompras) {
 			compra.setValorTotal(compra.getValorTotal() + it.getValorTotal());
 		}
@@ -58,7 +58,7 @@ public class ProdutoController {
 	@RequestMapping(method = RequestMethod.GET, value = "/cadastroProduto")
 	public ModelAndView cadastroProduto() {
 		ModelAndView andView = new ModelAndView("page/cadastroProduto");
-
+		
 		Iterable<Produto> produtoIte = produtoRepository.findAll();
 		andView.addObject("produto", produtoIte);
 		andView.addObject("obj", new Produto());
@@ -175,9 +175,12 @@ public class ProdutoController {
 
 		for (ItensCompra it : itensCompras) { // Pecorrer lista
 			if (it.getProduto().getId().equals(produto.getId())) {
+				
 				it.setQuantidade(it.getQuantidade() + 1);
+				it.setValorTotal(0.);
 				it.setValorTotal(it.getValorTotal() + (it.getQuantidade() * it.getValorUnitario()));
 				controle = 1;
+				
 				break;
 			}
 		}
@@ -225,8 +228,8 @@ public class ProdutoController {
 				} else if (acao == 0) {
 					it.setQuantidade(it.getQuantidade() - 1);
 					it.setValorTotal(0.);
-					// it.setValorTotal(it.getValorTotal() - (it.getQuantidade() * it.getValorUnitario()) );
-					// +(it.getQuantidade()*it.getValorUnitario()));
+					 it.setValorTotal(it.getValorTotal() + (it.getQuantidade() * it.getValorUnitario()) );
+					
 				}
 				break;
 			}
@@ -242,13 +245,16 @@ public class ProdutoController {
 
 		for (ItensCompra it : itensCompras) { // Pecorrer lista
 			if (it.getProduto().getId().equals(id)) {// Se meu produto+id for igual o parametro
+				
+				
 				itensCompras.remove(it);
-				it.setValorTotal(0.);
 				
 				break;
 			}
+			
 		}
-
+		
+		
 		ModelAndView andViewCAR = new ModelAndView("page/carrinho");
 		andViewCAR.addObject("listaItens", itensCompras);// Enviar o produto novamente para a tela
 		return "redirect:/carrinho";
@@ -263,6 +269,7 @@ public class ProdutoController {
 		        {
 		        	itensCompras.remove(it);
 		        	it.setValorTotal(0.);
+		        	
 		        }
 	
 			 System.out.println("deletou tudo");	
@@ -281,7 +288,7 @@ public class ProdutoController {
 			 while (!it.equals(0))
 		        {
 		        	itensCompras.remove(it);
-		        	it.setValorTotal(0.);
+		        	
 		        }
 	
 			 System.out.println("deletou tudo");	

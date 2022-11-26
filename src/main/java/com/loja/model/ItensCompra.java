@@ -1,5 +1,7 @@
 package com.loja.model;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -89,5 +91,26 @@ public class ItensCompra {
 	public void setValorUnitario(Double valorUnitario) {
 		this.valorUnitario = valorUnitario;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(compra, id, nome, produto, quantidade, valorTotal, valorUnitario);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ItensCompra other = (ItensCompra) obj;
+		return Objects.equals(compra, other.compra) && Objects.equals(id, other.id) && Objects.equals(nome, other.nome)
+				&& Objects.equals(produto, other.produto) && quantidade == other.quantidade
+				&& Objects.equals(valorTotal, other.valorTotal) && Objects.equals(valorUnitario, other.valorUnitario);
+	}
+	
+	
 
 }
