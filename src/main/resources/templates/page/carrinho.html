@@ -19,10 +19,10 @@
 
 
 
-	<header style="width: 100vw; height: 70vh; display: flex; align-items: center; justify-content: center;"
+	<header style="width: 100vw; height: 70vh; display: flex; align-items: center; justify-content: center;flex-direction: column;"
 		th:fragment="card">
 
-		<div class=" container card  mb-3" style="background-color: rgb(255, 255, 255); max-width: 50rem;">
+		<div class=" container card  mb-3" style="background-color: rgb(255, 255, 255); max-width: 50rem; " >
 
 
 
@@ -64,14 +64,14 @@
 			</tr>
 
 		</div>
-			
+				<div class="container d-flex justify-content-center ">
+		<a th:href="@{/deletarTudo}"	class="btn btn-outline-danger mr-1" style="width: 200px;">Cancelar Pedido</a>
+		<a th:href="@{/finalizarCarrinho}"	class="btn btn-outline-success ml-1" style="width: 200px;">Finalizar Pedido</a>
+	</div>
+
 
 	</header>
 
-	<div class="container">
-		<a th:href="@{/deletarTudo}"	class="btn btn-danger" style="width: 200px;">Cancelar</a>
-		<a th:href="@{/finalizarCarrinho}"	class="btn btn-success" style="width: 200px;">Finalizar Pedido</a>
-	</div>
 
 
 
